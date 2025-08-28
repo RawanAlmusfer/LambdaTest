@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -58,8 +60,8 @@ public class TakeFailedScreenshots {
     public void testSimpleFormDemo() {
         driver.findElement(By.linkText("Simple Form Demo")).click();
 
-        WebElement inputField = driver.findElement(By.xpath("//input[@id='user-message']"));
-        wait.until(driver -> inputField.isDisplayed());
+        WebElement inputField =
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='user-message']")));
 
         inputField.sendKeys("Rawan");
 

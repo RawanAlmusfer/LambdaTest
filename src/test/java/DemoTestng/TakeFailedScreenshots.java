@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class TakeFailedScreenshots {
-    SoftAssert softAssert = new SoftAssert();
     WebDriver driver;
     WebDriverWait wait;
 

@@ -71,6 +71,4 @@ public class TakeFailedScreenshots {
         Assert.assertTrue(msg.contains("Rawan"), "\n Incorrect \n");
     }
 
-
-
 }

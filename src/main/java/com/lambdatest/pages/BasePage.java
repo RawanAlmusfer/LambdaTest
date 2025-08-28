@@ -17,14 +17,14 @@ import org.openqa.selenium.WebElement;
 public class BasePage {
 
     public static WebDriver driver;
-    WebDriverWait wait;
+    public WebDriverWait wait;
 
     public static void setDriver(WebDriver driver) {
         BasePage.driver = driver;
     }
 
-    public static void setWait(WebDriverWait wait) {
-        BasePage.wait = wait;
+    public void setWait(WebDriverWait wait) {
+        this.wait = wait;
     }
 
     public WebElement find(By locator){
